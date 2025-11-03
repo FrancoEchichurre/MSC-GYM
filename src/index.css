@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Have Heart One';
+  src: url('./assets/fonts/have-heart-one.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Have Heart Two';
+  src: url('./assets/fonts/have-heart-two.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Have Heart Swash';
+  src: url('./assets/fonts/have-heart-swash.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@theme {
+  --color-gym-dark: #000000;
+  --color-gym-darker: #000000;
+  --color-gym-accent: #1cd8d2;
+
+  --font-sans: Raleway, Inter, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gym-accent text-gym-dark font-bold py-3 px-8 rounded-lg hover:bg-cyan-400 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-gym-accent text-gym-accent font-bold py-3 px-8 rounded-lg hover:bg-gym-accent hover:text-gym-dark transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-white mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-300 mb-12;
+  }
+}
+
+body {
+  background: #000000;
+  min-height: 100vh;
+}
+
+.HHOne {
+  font-family: 'Have Heart One', Inter, system-ui, sans-serif;
+}
+.HHTwo {
+  font-family: 'Have Heart Two', Inter, system-ui, sans-serif;
+}
+.HHSwash {
+  font-family: 'Have Heart Swash', Inter, system-ui, sans-serif;
+}
+
+.trim-vertical {
+  display: block;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+}
+
+.RalewayItalic {
+  font-family: 'Raleway', Inter, system-ui, sans-serif;
+  font-style: italic;
+}
+
+/* Custom transition duration for hero background images */
+.duration-2000 {
+  transition-duration: 2000ms;
+}
