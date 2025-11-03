@@ -70,19 +70,19 @@ const ImageCarousel = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             Nuestro Espacio
           </h2>
           <div className="w-24 h-1 bg-gym-accent mx-auto"></div>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative px-4 md:px-6">
-          <div className="flex flex-col md:flex-row gap-6">
+        <div className="relative px-2 sm:px-4 md:px-6">
+          <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
             {/* Main Image Display - Vertical */}
             <div className="flex-1">
-              <div className="relative h-[700px] md:h-[1000px] lg:h-[1100px] rounded-2xl overflow-hidden border-2 border-gym-accent/30 shadow-2xl shadow-gym-accent/20">
+              <div className="relative h-[500px] sm:h-[600px] md:h-[800px] lg:h-[1000px] xl:h-[1100px] rounded-xl sm:rounded-2xl overflow-hidden border-2 border-gym-accent/30 shadow-2xl shadow-gym-accent/20">
                 {images.map((image, index) => (
                   <div
                     key={index}
@@ -160,12 +160,12 @@ const ImageCarousel = () => {
             </div>
 
             {/* Thumbnail Preview - Vertical on the right */}
-            <div className="hidden md:flex flex-col gap-4 w-36 lg:w-44">
+            <div className="hidden md:flex flex-col gap-3 sm:gap-4 w-28 md:w-32 lg:w-36 xl:w-44">
               {images.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`relative h-32 lg:h-40 rounded-lg overflow-hidden transition-all duration-300 border-2 ${
+                  className={`relative h-24 md:h-28 lg:h-32 xl:h-40 rounded-lg overflow-hidden transition-all duration-300 border-2 ${
                     index === currentIndex
                       ? 'border-gym-accent scale-105 shadow-lg shadow-gym-accent/50'
                       : 'border-gray-700 opacity-60 hover:opacity-100 hover:border-gym-accent/50'

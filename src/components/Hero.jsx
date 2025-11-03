@@ -39,42 +39,42 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 sm:py-0">
         <div className="text-center">
-          <h1 className="text-9xl md:text-[14rem] lg:text-[18rem] text-white tracking-tight HHTwo leading-[0.75] -my-8">
+          <h1 className="text-7xl sm:text-9xl md:text-[14rem] lg:text-[18rem] text-white tracking-tight HHTwo leading-[0.75] -my-4 sm:-my-8">
             MOVE
           </h1>
 
-          <h2 className="text-6xl md:text-8xl lg:text-9xl text-gym-accent mb-20 tracking-wider HHTwo">
+          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-gym-accent mb-8 sm:mb-12 md:mb-20 tracking-wider HHTwo">
             Strength Conditioning
           </h2>
 
-          <p className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-14 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 mb-8 sm:mb-10 md:mb-14 max-w-4xl mx-auto leading-relaxed px-4">
             Performance & Rehabilitación<br />
-            <span className="text-gym-accent font-semibold lg:text-xl">Rendimiento Deportivo - Fisioterapia Deportiva - Entrenamiento Personalizado</span>
+            <span className="text-gym-accent font-semibold text-sm sm:text-base md:text-lg lg:text-xl block mt-2">Rendimiento Deportivo - Fisioterapia Deportiva - Entrenamiento Personalizado</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="#contact" className="btn-primary text-xl px-10 py-5">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+            <a href="#contact" className="btn-primary text-lg sm:text-xl px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto">
               Contactanos
             </a>
-            <a href="#services" className="btn-secondary text-xl px-10 py-5">
+            <a href="#services" className="btn-secondary text-lg sm:text-xl px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto">
               Ver Planes
             </a>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-gym-darker/50 backdrop-blur-sm p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
-              <div className="text-6xl md:text-7xl font-bold text-gym-accent mb-3">200+</div>
-              <div className="text-xl text-gray-300 font-semibold">Clientes entrenados</div>
+          <div className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-4">
+            <div className="bg-gym-darker/50 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
+              <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-gym-accent mb-2 sm:mb-3">200+</div>
+              <div className="text-base sm:text-lg md:text-xl text-gray-300 font-semibold">Clientes entrenados</div>
             </div>
-            <div className="bg-gym-darker/50 backdrop-blur-sm p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
-              <div className="text-6xl md:text-7xl font-bold text-gym-accent mb-3">7+</div>
-              <div className="text-xl text-gray-300 font-semibold">Años de Experiencia</div>
+            <div className="bg-gym-darker/50 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
+              <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-gym-accent mb-2 sm:mb-3">7+</div>
+              <div className="text-base sm:text-lg md:text-xl text-gray-300 font-semibold">Años de Experiencia</div>
             </div>
-            <div className="bg-gym-darker/50 backdrop-blur-sm p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
-              <div className="text-6xl md:text-7xl font-bold text-gym-accent mb-3">100%</div>
-              <div className="text-xl text-gray-300 font-semibold">Personalizado</div>
+            <div className="bg-gym-darker/50 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
+              <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-gym-accent mb-2 sm:mb-3">100%</div>
+              <div className="text-base sm:text-lg md:text-xl text-gray-300 font-semibold">Personalizado</div>
             </div>
           </div>
         </div>
