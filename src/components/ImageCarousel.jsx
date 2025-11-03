@@ -7,27 +7,27 @@ const ImageCarousel = () => {
   // Array de imágenes para el carrusel
   const images = [
     {
-      src: '/src/assets/images/carousel-1.jpg',
+      src: '/images/carousel-1.jpg',
       alt: 'Entrenamiento de fuerza'
     },
     {
-      src: '/src/assets/images/carousel-2.jpg',
+      src: '/images/carousel-2.jpg',
       alt: 'Rehabilitación deportiva'
     },
     {
-      src: '/src/assets/images/carousel-3.jpg',
+      src: '/images/carousel-3.jpg',
       alt: 'Acondicionamiento físico'
     },
     {
-      src: '/src/assets/images/carousel-4.jpg',
+      src: '/images/carousel-4.jpg',
       alt: 'Entrenamiento personalizado'
     },
     {
-      src: '/src/assets/images/carousel-5.jpg',
+      src: '/images/carousel-5.jpg',
       alt: 'Fisioterapia profesional'
     },
     {
-      src: '/src/assets/images/carousel-6.jpg',
+      src: '/images/carousel-6.jpg',
       alt: 'Performance deportivo'
     }
   ];
