@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
+  const [activePlan, setActivePlan] = useState(null);
+
   const services = [
     {
       icon: '🏃',
@@ -31,6 +34,17 @@ const Services = () => {
       features: ['Recuperación de lesiones', 'Terapia manual', 'Prevención de dolores', 'Movilidad articular'],
     },
   ];
+
+  const plans = [
+    { name: 'BÁSICO', price: '$3800', period: 'por mes', features: ['+ MATRÍCULA'] },
+    { name: 'ESTÁNDAR', price: '$3230', period: '3 meses', features: ['EXONERA MATRICULA'] },
+    { name: 'PREMIUM', price: '$2850', period: '6 meses', features: ['EXONERA MATRICULA'], popular: true },
+    { name: 'ELITE', price: '$2470', period: 'ANUAL', features: ['EXONERA MATRICULA'] },
+  ];
+
+  const handlePlanClick = (index) => {
+    setActivePlan(activePlan === index ? null : index);
+  };
 
   return (
     <section id="services" className="py-12 sm:py-16 md:py-24 bg-gym-dark">
@@ -86,12 +100,12 @@ const Services = () => {
 
               {/* CTA button */}
               <div className="mt-8 text-center">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="inline-block text-gym-accent font-bold hover:text-white transition-colors duration-300"
                 >
                   Más información →
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -102,9 +116,9 @@ const Services = () => {
           <p className="text-xl text-gray-300 mb-6">
             ¿No estás seguro cuál programa es para ti?
           </p>
-          <a href="#contact" className="btn-primary text-lg">
+          <Link to="/contact" className="btn-primary text-lg">
             Agenda una Consulta Gratuita
-          </a>
+          </Link>
         </div>
 
         {/* PLANES Section */}
@@ -117,84 +131,58 @@ const Services = () => {
             <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
               Todos los planes incluyen planificación individualizada.
             </p>
+            <p className="text-sm text-gray-400 mt-2">
+              (Toca una tarjeta para más opciones)
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {/* Plan 1 - Básico */}
-            <div className="bg-gym-darker rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-gray-700 hover:border-gym-accent transition-all duration-300 hover:transform hover:scale-105 flex flex-col">
-              <div className="text-center mb-4 sm:mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">BÁSICO</h3>
-                <div className="text-4xl sm:text-5xl font-bold text-gym-accent mb-2">$3800</div>
-                <p className="text-sm sm:text-base text-gray-400">por mes</p>
+            {plans.map((plan, index) => (
+              <div
+                key={index}
+                onClick={() => handlePlanClick(index)}
+                className={`relative bg-gym-darker rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 transition-all duration-300 transform flex flex-col cursor-pointer ${plan.popular
+                    ? 'border-gym-accent bg-gradient-to-b from-gym-accent/10 to-gym-darker'
+                    : 'border-gray-700 hover:border-gym-accent'
+                  } ${activePlan === index ? 'scale-105 border-gym-accent shadow-2xl shadow-gym-accent/20' : 'hover:scale-105'}`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-gym-accent text-black px-4 sm:px-6 py-1 rounded-full font-bold text-xs sm:text-sm">
+                    MÁS POPULAR
+                  </div>
+                )}
+
+                <div className="text-center mb-4 sm:mb-6 mt-2 sm:mt-0">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl sm:text-5xl font-bold text-gym-accent mb-2">{plan.price}</div>
+                  <p className="text-sm sm:text-base text-gray-400">{plan.period}</p>
+                </div>
+
+                <ul className="space-y-4 mb-16 flex-grow">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-gray-300">
+                      <svg className="w-6 h-6 text-gym-accent mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Interactive Button */}
+                {activePlan === index && (
+                  <div className="absolute bottom-6 right-6 animate-bounce z-10 block">
+                    <Link
+                      to="/contact"
+                      className="bg-gym-accent text-black font-bold px-4 py-2 rounded-lg shadow-lg hover:bg-white transition-colors text-sm sm:text-base whitespace-nowrap"
+                      onClick={(e) => e.stopPropagation()} // Prevent closing immediately
+                    >
+                      ¡Hablanos! 👋
+                    </Link>
+                  </div>
+                )}
               </div>
-
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start text-gray-300">
-                  <svg className="w-6 h-6 text-gym-accent mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>+ MATRÍCULA</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Plan 2 - Estándar */}
-            <div className="bg-gym-darker rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-gray-700 hover:border-gym-accent transition-all duration-300 hover:transform hover:scale-105 flex flex-col">
-              <div className="text-center mb-4 sm:mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">ESTÁNDAR</h3>
-                <div className="text-4xl sm:text-5xl font-bold text-gym-accent mb-2">$3230</div>
-                <p className="text-sm sm:text-base text-gray-400">3 meses</p>
-              </div>
-
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start text-gray-300">
-                  <svg className="w-6 h-6 text-gym-accent mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>EXONERA MATRICULA</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Plan 3 - Premium - DESTACADO */}
-            <div className="bg-gradient-to-b from-gym-accent/10 to-gym-darker rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-gym-accent transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-gym-accent/40 flex flex-col relative">
-              <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-gym-accent text-black px-4 sm:px-6 py-1 rounded-full font-bold text-xs sm:text-sm">
-                MÁS POPULAR
-              </div>
-
-              <div className="text-center mb-4 sm:mb-6 mt-2 sm:mt-0">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">PREMIUM</h3>
-                <div className="text-4xl sm:text-5xl font-bold text-gym-accent mb-2">$2850</div>
-                <p className="text-sm sm:text-base text-gray-400">6 meses</p>
-              </div>
-
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start text-gray-300">
-                  <svg className="w-6 h-6 text-gym-accent mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>EXONERA MATRICULA</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Plan 4 - Elite */}
-            <div className="bg-gym-darker rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-gray-700 hover:border-gym-accent transition-all duration-300 hover:transform hover:scale-105 flex flex-col">
-              <div className="text-center mb-4 sm:mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">ELITE</h3>
-                <div className="text-4xl sm:text-5xl font-bold text-gym-accent mb-2">$2470</div>
-                <p className="text-sm sm:text-base text-gray-400">ANUAL</p>
-              </div>
-
-              <ul className="space-y-4 mb-8 flex-grow">
-                <li className="flex items-start text-gray-300">
-                  <svg className="w-6 h-6 text-gym-accent mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>EXONERA MATRICULA</span>
-                </li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const About = () => {
+const About = ({ isPage = false }) => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-gym-darker">
+    <section id="about" className={`${isPage ? 'min-h-screen pt-24 pb-12' : 'py-16 md:py-24'} bg-gym-darker`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="section-title">

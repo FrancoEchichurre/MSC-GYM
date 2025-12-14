@@ -1,7 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Contact = () => {
+const Contact = ({ isPage = false }) => {
+  // ... existing state ... (This line is just a placeholder, I am replacing the declaration and return start)
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -80,7 +82,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gym-dark">
+    <section id="contact" className={`${isPage ? 'min-h-screen pt-24 pb-12' : 'py-16 md:py-24'} bg-gym-dark`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">
@@ -117,9 +119,8 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-gym-dark border ${
-                    errors.name ? 'border-red-500' : 'border-gray-700'
-                  } rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors`}
+                  className={`w-full px-4 py-3 bg-gym-dark border ${errors.name ? 'border-red-500' : 'border-gray-700'
+                    } rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors`}
                   placeholder="Tu nombre"
                 />
                 {errors.name && <p className="mt-2 text-red-500 text-sm">{errors.name}</p>}
@@ -136,9 +137,8 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-gym-dark border ${
-                    errors.email ? 'border-red-500' : 'border-gray-700'
-                  } rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors`}
+                  className={`w-full px-4 py-3 bg-gym-dark border ${errors.email ? 'border-red-500' : 'border-gray-700'
+                    } rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors`}
                   placeholder="tu@email.com"
                 />
                 {errors.email && <p className="mt-2 text-red-500 text-sm">{errors.email}</p>}
@@ -171,9 +171,8 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
-                  className={`w-full px-4 py-3 bg-gym-dark border ${
-                    errors.message ? 'border-red-500' : 'border-gray-700'
-                  } rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors resize-none`}
+                  className={`w-full px-4 py-3 bg-gym-dark border ${errors.message ? 'border-red-500' : 'border-gray-700'
+                    } rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors resize-none`}
                   placeholder="Cuéntanos sobre tus objetivos..."
                 />
                 {errors.message && <p className="mt-2 text-red-500 text-sm">{errors.message}</p>}
@@ -189,7 +188,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-gym-darker rounded-xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6">Información de contacto</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Información</h3>
 
               <div className="space-y-6">
                 {/* Address */}
@@ -198,9 +197,9 @@ const Contact = () => {
                   <div>
                     <h4 className="text-white font-bold mb-1">Dirección</h4>
                     <p className="text-gray-400">
-                      Av. Santa Fe 1234<br />
-                      C1425 CABA, Buenos Aires<br />
-                      Argentina
+                      Calle 123<br />
+                      Calle 456<br />
+                      Uruguay
                     </p>
                   </div>
                 </div>
@@ -210,8 +209,8 @@ const Contact = () => {
                   <div className="text-gym-accent text-2xl mr-4 mt-1">📞</div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Teléfono</h4>
-                    <p className="text-gray-400">+54 9 11 1234-5678</p>
-                    <p className="text-gray-400">+54 11 4567-8910</p>
+                    <p className="text-gray-400">+xxxxx</p>
+                    <p className="text-gray-400">+xxxxx</p>
                   </div>
                 </div>
 

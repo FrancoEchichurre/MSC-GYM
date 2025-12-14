@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,23 +12,42 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gym-dark">
-      {/* Fixed Navigation */}
-      <Navbar />
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen bg-gym-dark">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <Hero />
+              {/* About - Hidden on mobile, visible on md+ */}
+              <div className="hidden md:block">
+                <About />
+              </div>
+              <ImageCarousel />
+              <Services />
+              <Schedule />
+              {/* Contact - Hidden on mobile, visible on md+ */}
+              <div className="hidden md:block">
+                <Contact />
+              </div>
 
-      {/* Main Content */}
-      <main>
-        <Hero />
-        <About />
-        <ImageCarousel />
-        <Services />
-        <Schedule />
-        <Contact />
-      </main>
+              {/* Mobile Contact Button - Subtle replacement for the section */}
+              <div className="md:hidden py-16 px-4 text-center bg-gym-darker/50">
+                <p className="text-gray-400 mb-6 text-lg">¿Tienes dudas o quieres empezar?</p>
+                <Link to="/contact" className="inline-block border border-gym-accent text-gym-accent px-10 py-3 rounded-md hover:bg-gym-accent hover:text-black transition-all duration-300 font-bold tracking-wide text-lg">
+                  CONTACTANOS
+                </Link>
+              </div>
+            </main>
+          } />
 
-      {/* Footer */}
-      <Footer />
-    </div>
+          <Route path="/about" element={<About isPage={true} />} />
+          <Route path="/contact" element={<Contact isPage={true} />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

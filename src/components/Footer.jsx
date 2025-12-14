@@ -66,11 +66,11 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start">
                 <span className="mr-2">📍</span>
-                <span>Av. Santa Fe 1234, CABA</span>
+                <span>Calle 123</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">📞</span>
-                <span>+54 9 11 1234-5678</span>
+                <span>+xxxxx</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">✉️</span>
@@ -79,27 +79,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
-        {/* Newsletter section */}
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h4 className="text-xl font-bold text-white mb-3">Newsletter</h4>
-            <p className="text-gray-400 mb-4">
-              Suscríbete para recibir tips de entrenamiento y ofertas exclusivas
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Tu email"
-                className="flex-1 px-4 py-3 bg-gym-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gym-accent transition-colors"
-              />
-              <button className="btn-primary whitespace-nowrap">
-                Suscribirse
-              </button>
-            </div>
-          </div>
-        </div>
-
+        
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400">

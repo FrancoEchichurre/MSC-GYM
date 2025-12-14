@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -39,13 +39,13 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 sm:py-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 sm:py-0 -mt-20 sm:mt-0">
         <div className="text-center">
-          <h1 className="text-7xl sm:text-9xl md:text-[14rem] lg:text-[18rem] text-white tracking-tight HHTwo leading-[0.75] -my-4 sm:-my-8">
+          <h1 className="text-[10rem] sm:text-[12rem] md:text-[14rem] lg:text-[18rem] text-white tracking-tight HHTwo leading-[0.70] -my-4 sm:-my-10">
             MOVE
           </h1>
 
-          <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-gym-accent mb-8 sm:mb-12 md:mb-20 tracking-wider HHTwo">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gym-accent mb-8 sm:mb-12 md:mb-20 tracking-wider HHTwo">
             Strength Conditioning
           </h2>
 
@@ -55,15 +55,22 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
-            <a href="#contact" className="btn-primary text-lg sm:text-xl px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto">
-              Contactanos
+            <a href="#plans" className="btn-primary text-xl sm:text-xl px-10 sm:px-10 py-5 sm:py-5 w-full sm:w-auto font-bold tracking-wide">
+              Empezar
             </a>
-            <a href="#services" className="btn-secondary text-lg sm:text-xl px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto">
-              Ver Planes
+
+            {/* Desktop Link */}
+            <a href="#about" className="hidden md:inline-flex btn-secondary text-xl sm:text-xl px-10 sm:px-10 py-5 sm:py-5 w-full sm:w-auto font-bold tracking-wide justify-center">
+              Conócenos
             </a>
+
+            {/* Mobile Link */}
+            <Link to="/about" className="md:hidden inline-flex btn-secondary text-xl sm:text-xl px-10 sm:px-10 py-5 sm:py-5 w-full sm:w-auto font-bold tracking-wide justify-center">
+              Conócenos
+            </Link>
           </div>
 
-          <div className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-4">
+          <div className="mt-12 sm:mt-16 md:mt-20 hidden sm:grid sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-4">
             <div className="bg-gym-darker/50 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-lg border border-gym-accent/20 hover:border-gym-accent/60 transition-all duration-300">
               <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-gym-accent mb-2 sm:mb-3">200+</div>
               <div className="text-base sm:text-lg md:text-xl text-gray-300 font-semibold">Clientes entrenados</div>
