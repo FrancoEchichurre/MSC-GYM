@@ -6,7 +6,7 @@ const About = ({ isPage = false }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="section-title">
-            Sobre <span className="text-9xl md:text-[14rem] lg:text-[6rem] text-white tracking-tight HHTwo leading-[0.75] -my-8">MOVE</span>
+            Sobre <span className="text-9xl md:text-[14rem] lg:text-[6rem] text-white tracking-tight HHTwo leading-[0.75] -my-8">TCM</span>
           </h2>
           <div className="w-24 h-1 bg-gym-accent mx-auto mb-8"></div>
         </div>
@@ -15,19 +15,19 @@ const About = ({ isPage = false }) => {
           {/* Left content - Text */}
           <div className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              En <span className="text-gym-accent font-bold">MOVE</span>, creemos que el fitness va más allá de levantar pesas.
+              En <span className="text-gym-accent font-bold">Training Club Movement</span>, creemos que el fitness va más allá de levantar pesas.
               Es una filosofía de vida que combina fuerza, resistencia y determinación mental para ayudarte a alcanzar tu máximo potencial.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              Nuestro enfoque único en <span className="text-gym-accent font-bold">M</span><span className="font-semibold text-white">SC</span> está diseñado
+              Nuestro enfoque único en <span className="text-gym-accent font-bold">TCM</span> está diseñado
               para desarrollar atletas completos. Ya seas principiante o atleta experimentado, nuestros programas personalizados
               te llevarán al siguiente nivel.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
               Contamos con entrenadores certificados, equipamiento de última generación y una comunidad apasionada que te motivará
-              cada día. En MOVE, no solo transformas tu cuerpo, <span className="text-gym-accent font-semibold">transformas tu vida</span>.
+              cada día. En Training Club Movement, no solo transformas tu cuerpo, <span className="text-gym-accent font-semibold">transformas tu vida</span>.
             </p>
 
             <div className="pt-6">

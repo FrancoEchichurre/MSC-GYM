@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import logo from '../assets/images/TRAINING-CM.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,14 +81,14 @@ const Navbar = () => {
   }, [isHomePage]);
 
   return (
-    <nav className={`fixed w-full top-0 z-50 bg-gym-darker/95 backdrop-blur-sm shadow-lg transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+    <nav className={`fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-lg transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center h-16 ${!isHomePage ? 'justify-center md:justify-between' : 'justify-between'}`}>
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-5xl font-normal text-gym-accent HHTwo">
-              MSC
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="Training Club Movement" className="h-16 md:h-20 w-auto" />
             </Link>
           </div>
 
@@ -99,7 +100,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link, false)}
-                  className="text-gray-300 hover:text-gym-accent transition-colors duration-300 font-semibold text-lg cursor-pointer"
+                  className="text-gray-800 hover:text-gym-accent transition-colors duration-300 font-semibold text-lg cursor-pointer"
                 >
                   {link.name}
                 </a>
@@ -112,7 +113,7 @@ const Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-gym-accent focus:outline-none focus:text-gym-accent"
+                className="text-gray-800 hover:text-gym-accent focus:outline-none focus:text-gym-accent"
               >
                 <svg
                   className="h-6 w-6"
@@ -144,14 +145,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gym-dark/98">
+        <div className="md:hidden bg-white/95 backdrop-blur-md">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.mobileHref}
                 onClick={(e) => handleNavClick(e, link, true)}
-                className="text-gray-300 hover:text-gym-accent block px-3 py-2 text-base font-semibold transition-colors duration-300"
+                className="text-gray-800 hover:text-gym-accent block px-3 py-2 text-base font-semibold transition-colors duration-300"
               >
                 {link.name}
               </Link>

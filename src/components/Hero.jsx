@@ -41,12 +41,12 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 sm:py-0 -mt-20 sm:mt-0">
         <div className="text-center">
-          <h1 className="text-[10rem] sm:text-[12rem] md:text-[14rem] lg:text-[18rem] text-white tracking-tight HHTwo leading-[0.70] -my-4 sm:-my-10">
-            MOVE
+          <h1 className="text-[5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] text-white tracking-tight HHTwo leading-[0.85] -my-4 sm:-my-10">
+            Training Club
           </h1>
 
           <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gym-accent mb-8 sm:mb-12 md:mb-20 tracking-wider HHTwo">
-            Strength Conditioning
+            Movement
           </h2>
 
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 mb-8 sm:mb-10 md:mb-14 max-w-4xl mx-auto leading-relaxed px-4">

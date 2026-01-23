@@ -219,8 +219,8 @@ const Contact = ({ isPage = false }) => {
                   <div className="text-gym-accent text-2xl mr-4 mt-1">✉️</div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Email</h4>
-                    <p className="text-gray-400">info@movegym.com</p>
-                    <p className="text-gray-400">soporte@movegym.com</p>
+                    <p className="text-gray-400">info@trainingclubmovement.com</p>
+                    <p className="text-gray-400">soporte@trainingclubmovement.com</p>
                   </div>
                 </div>
 

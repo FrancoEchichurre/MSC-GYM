@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo and description */}
           <div>
-            <h3 className="text-gym-accent lg:text-[3rem] HHTwo">MOVE</h3>
+            <h3 className="text-gym-accent lg:text-[3rem] HHTwo">TCM</h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Transformando vidas a través del strength conditioning. Únete a nuestra comunidad y descubre tu potencial.
             </p>
@@ -74,16 +74,16 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <span className="mr-2">✉️</span>
-                <span>info@movegym.com</span>
+                <span>info@trainingclubmovement.com</span>
               </li>
             </ul>
           </div>
         </div>
-        
+
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} <span className="text-gym-accent font-bold">MOVE</span> Strength Conditioning.
+            © {currentYear} <span className="text-gym-accent font-bold">Training Club Movement</span>.
             Todos los derechos reservados.
           </p>
           <p className="text-gray-500 text-sm mt-2">
