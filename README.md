@@ -1,185 +1,69 @@
-# MOVE - Strength Conditioning Gym
+# Training Club Movement
+**Landing page moderna y de alto rendimiento para un gimnasio especializado.**
+Diseñada para atraer, informar y convertir visitantes en atletas.
 
-Landing page moderna y responsive para gimnasio especializado en entrenamiento funcional, levantamiento de pesas y acondicionamiento metabólico.
+[![React](https://img.shields.io/badge/React-19.0.0-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6.0.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Generic badge](https://img.shields.io/badge/Status-En_Desarrollo-orange?style=for-the-badge)](https://shields.io/)
 
-## Características
+[Ver Demo en Vivo](#) · [Reportar Bug](#) · [Solicitar Feature](#)
 
-- **Design moderno y atractivo**: Paleta de colores oscura con acentos turquesa (#1CD8D2)
-- **100% Responsive**: Funciona perfectamente en desktop, tablet y mobile
-- **Navegación suave**: Smooth scroll entre secciones
-- **Componentes interactivos**:
-  - Navbar con menú hamburguesa en mobile
-  - Formulario de contacto con validación
-  - Efectos hover en tarjetas y botones
-  - Animaciones sutiles
-- **SEO optimizado**: Meta tags y estructura semántica
 
-## Secciones
 
-1. **Hero**: Página principal con título impactante y CTAs
-2. **About**: Información sobre el gimnasio y sus valores
-3. **Services**: 3 tarjetas con los servicios principales
-4. **Schedule**: Horarios de apertura y clases programadas
-5. **Contact**: Formulario funcional y datos de contacto
-6. **Footer**: Links rápidos, redes sociales y newsletter
+## 🎯 ¿Para qué es este proyecto?
 
-## Tecnologías
+**Training Club Movement** es una solución web integral creada para establecer la presencia digital de un gimnasio boutique.
 
-- **React 18** - Framework JavaScript
-- **Vite** - Build tool ultrarrápido
-- **Tailwind CSS 4** - Framework de CSS utility-first
-- **pnpm** - Gestor de paquetes eficiente
+El **propósito principal** de este proyecto es:
+    1.  **Digitalizar la Marca**: Llevar la identidad visual del gimnasio (fuerza, modernidad, comunidad) a la web.
+    2.  **Atracción de Clientes**: Servir como el primer punto de contacto (Landing Page) donde los usuarios se enamoran del concepto.
+    3.  **Facilitar la Información**: Centralizar horarios, servicios y métodos de contacto en una interfaz accesible y rápida.
 
-## Instalación
+No es solo una página estática; es una herramienta de marketing diseñada para reflejar la calidad del entrenamiento que se ofrece en el espacio físico.
 
-### Prerrequisitos
+## 📖 ¿De qué se habla en la página?
 
-- Node.js 16+ instalado
-- pnpm instalado globalmente
+El sitio está estructurado narrativamente para guiar al usuario desde el interés hasta la acción. El contenido se divide en:
 
-```bash
-npm install -g pnpm
-```
+*   **1. Hero Section (Bienvenida)**: Una introducción visual potente con el eslogan de la marca y llamadas a la acción claras ("Empezar ahora").
+*   **2. About Us (Nuestra Filosofía)**: Se detalla quiénes somos, el enfoque en el entrenamiento funcional y la comunidad que se construye día a día.
+*   **3. Services (Nuestras Clases)**: Desglose de las modalidades de entrenamiento ofrecidas:
+    *   *Strength*: Levantamiento de pesas y fuerza pura.
+    *   *Conditioning*: Acondicionamiento metabólico.
+    *   *Mobility*: Trabajo de flexibilidad y prevención de lesiones.
+*   **4. Schedule (Horarios)**: Una vista clara y organizada de la grilla de clases para que los usuarios planifiquen su semana.
+*   **5. Contact (Únete)**: Formulario de contacto directo y mapa de ubicación para eliminar fricciones en el proceso de inscripción.
 
-### Pasos de instalación
+##  Tecnologías Utilizadas
 
-1. Clonar o navegar al directorio del proyecto:
+Este proyecto fue construido seleccionando cuidadosamente un stack moderno para garantizar rendimiento, escalabilidad y una excelente experiencia de desarrollador.
 
-```bash
-cd move-gym
-```
+| Tecnología | ¿Por qué se usó? |
+|:--- |:--- |
+| **[React 19](https://react.dev/)** | Utilizamos la última versión de React para construir una interfaz basada en componentes modulares. Esto permite reutilizar código (como las tarjetas de servicios o botones) y mantener el estado de la aplicación de manera eficiente. |
+| **[Vite](https://vitejs.dev/)** | Elegido como entorno de desarrollo por su velocidad extrema. A diferencia de Create-React-App, Vite ofrece un inicio de servidor instantáneo y Hot Module Replacement (HMR), lo que acelera drásticamente el flujo de trabajo. |
+| **[Tailwind CSS 4](https://tailwindcss.com/)** | Framework de CSS "utility-first". Nos permitió diseñar el sistema de modo oscuro y los acentos neón sin escribir hojas de estilo CSS tradicionales. Facilita que el sitio sea 100% responsive y fácil de mantener. |
+| **[PostCSS](https://postcss.org/)** | Herramienta utilizada internamente para procesar el CSS y asegurar la compatibilidad con diferentes navegadores. |
 
-2. Instalar dependencias:
+## 📸 Galería del Proyecto
 
-```bash
-pnpm install
-```
+*(Espacio reservado para capturas de pantalla reales)*
 
-3. Iniciar el servidor de desarrollo:
+| Vista Desktop | Vista Mobile |
+|:---:|:---:|
+| ![Desktop](https://via.placeholder.com/500x300?text=Desktop+Preview) | ![Mobile](https://via.placeholder.com/200x400?text=Mobile+Preview) |
 
-```bash
-pnpm dev
-```
-
-4. Abrir el navegador en `http://localhost:5173`
-
-## Scripts disponibles
-
-```bash
-# Iniciar servidor de desarrollo
-pnpm dev
-
-# Construir para producción
-pnpm build
-
-# Previsualizar build de producción
-pnpm preview
-
-# Linting (si se configura ESLint)
-pnpm lint
-```
-
-## Estructura del proyecto
+## � Estructura del Código
 
 ```
-move-gym/
-├── public/              # Archivos estáticos
-├── src/
-│   ├── components/      # Componentes de React
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Services.jsx
-│   │   ├── Schedule.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   ├── App.jsx          # Componente principal
-│   ├── main.jsx         # Punto de entrada
-│   └── index.css        # Estilos globales con Tailwind
-├── index.html           # HTML principal
-├── tailwind.config.js   # Configuración de Tailwind
-├── postcss.config.js    # Configuración de PostCSS
-├── vite.config.js       # Configuración de Vite
-└── package.json         # Dependencias del proyecto
+src/
+├── components/   # Piezas reusables (Navbar, Hero, Cards...)
+├── App.jsx       # Componente raíz que orquesta las secciones
+├── main.jsx      # Punto de entrada de la aplicación
+└── index.css     # Estilos base y configuración de Tailwind
 ```
-
-## Personalización
-
-### Colores
-
-Los colores principales están definidos en `tailwind.config.js`:
-
-```javascript
-colors: {
-  'gym-dark': '#0f172a',
-  'gym-darker': '#1e293b',
-  'gym-accent': '#1CD8D2',
-}
-```
-
-### Componentes
-
-Cada componente está en un archivo separado para fácil mantenimiento. Para modificar una sección, edita el archivo correspondiente en `src/components/`.
-
-### Estilos globales
-
-Los estilos custom y clases de utilidad están en `src/index.css`.
-
-## Deployment
-
-### Vercel (Recomendado)
-
-1. Instalar Vercel CLI:
-
-```bash
-pnpm add -g vercel
-```
-
-2. Deployar:
-
-```bash
-vercel
-```
-
-### Netlify
-
-1. Build del proyecto:
-
-```bash
-pnpm build
-```
-
-2. Subir la carpeta `dist` a Netlify
-
-### Otras plataformas
-
-El proyecto genera una carpeta `dist` después de `pnpm build` que puede ser servida por cualquier servidor web estático.
-
-## Características técnicas
-
-- **Formulario de contacto**: Validación client-side (email, campos requeridos, longitud mínima)
-- **Navegación responsive**: Menú hamburguesa automático en pantallas pequeñas
-- **Smooth scroll**: Navegación suave entre secciones con anclas
-- **Hover effects**: Animaciones sutiles en tarjetas y botones
-- **Performance optimizado**: Tailwind CSS purge automático en producción
-
-## Próximas mejoras sugeridas
-
-- [ ] Integrar backend para formulario de contacto (EmailJS, Formspree, etc.)
-- [ ] Agregar galería de fotos del gimnasio
-- [ ] Implementar sistema de reserva de clases
-- [ ] Agregar testimonios de clientes
-- [ ] Integrar Google Maps para ubicación
-- [ ] Agregar blog de fitness
-
-## Soporte
-
-Para reportar problemas o sugerir mejoras, contactar a: info@movegym.com
-
-## Licencia
-
-Este proyecto fue creado para MOVE Strength Conditioning Gym.
 
 ---
 
-**Desarrollado con** 💪 **para atletas comprometidos**
+**Desarrollado con 💪 para Training Club Movement**
